@@ -23,11 +23,11 @@ border: 2px solid black;
  margin: 2% 20%;
  border: 2px solid black;
  background: rgba(190,190,190,1);
- box-shadow: 5px 5px 10px 1px;
+ box-shadow: 2px 2px 5px 1px;
 }
 #quote{
  font-style: italic;
- font-size: 1.2rem;
+ font-size: 1.2 rem;
 }
 
 h2{
@@ -35,14 +35,19 @@ h2{
  text-decoration: underline;
 }
 
-#tribute-info{
+.tribute-info{
+ width: 95%;
+ max-width: 1150px;
+ display: block;
+ margin: 2rem auto;
  font-size: 1.2rem;
- text-align: center;
+ 
 }
 
 #more-info{
  text-align: center;
  font-size: 1.2rem;
+ margin-bottom: 2rem;
 }
 
 
