@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="center">
+      <header>
+        <h1 class="title" id="title">Restuarant Survey</h1>
+        <p class="survey-description" id="description">
+          Please help us improve by completing this short survey
+        </p>
+      </header>
+      <div class="form-container">
+        <form action="" id="survey-form">
+          <div class="intro-info">
+            <div class="name">
+              <!-- NAME EMAIL # IN PARTY -->
+              <label for="name" id="name-label" class="name-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required="required"
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <label for="email" id="email-label" class="email-label"
+              >Email</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required="required"
+              placeholder="Enter Your Email"
+            />
+            <label for="number" id="number-label" class="number-label"
+              >How Many in Your Party?</label
+            >
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="1"
+              max="100"
+              placeholder="Number in Party"
+            />
+            <label for="date" class="date-label">Order Date</label>
+            <input type="date" name="date" id="date" />
+
+            <!-- DROPDOWN -->
+            <label for="dropdown" id="dropdown" class="dropdown"
+              >How Did You Hear About Us?</label
+            >
+            <select name="dropdown" id="dropdown">
+              <option value="1">Newspaper</option>
+              <option value="2">TV</option>
+              <option value="3">Radio</option>
+              <option value="4">Friend</option>
+              <option value="4">Other</option>
+            </select>
+          </div>
+
+          <!-- CHECKBOXES -->
+          <div class="checkboxes">
+            <p class="checkbox-group heading">What Did You Order:</p>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="dine-in"
+            />
+            <label for="dine-in">Dine In</label>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="take-out"
+            />
+            <label for="take-out">Take Out</label>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="delivery"
+            />
+            <label for="delivery">Delivery</label>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="breakfast"
+            />
+            <label for="breakfast">Breakfast</label>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="lunch"
+            />
+            <label for="lunch">Lunch</label>
+            <input
+              type="checkbox"
+              name="what-did-you-order"
+              id="what-did-you-order"
+              value="dinner"
+            />
+            <label for="dinner">Dinner</label>
+          </div>
+
+          <!-- RADIO BUTTON GROUPS -->
+          <p class="heading">How would you rate following:</p>
+          <!-- Quality -->
+          <p class="quality-rating">Quality of Food:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="quality-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="quality-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="quality-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="quality-rating">Poor</label>
+
+          <!-- Portion -->
+          <p class="portion-rating">Portion Size:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="portion-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="portion-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="portion-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="portion-rating">Poor</label>
+
+          <!-- Ease -->
+          <p class="ease-rating">Ease of Ordering:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="ease-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="ease-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="ease-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="ease-rating">Poor</label>
+
+          <!-- Service -->
+          <p class="service-rating">Service:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="service-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="service-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="service-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="service-rating">Poor</label>
+
+          <!-- Cleanliness -->
+          <p class="clean-rating">Cleanliness:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="clean-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="clean-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="clean-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="clean-rating">Poor</label>
+
+          <!-- Overall Value -->
+          <p class="overall-rating">Overall Value:</p>
+          <input type="radio" name="quality" id="quality" value="excellent" />
+          <label for="quality" class="overall-rating">Excellent</label>
+          <input type="radio" name="quality" id="quality" value="good" />
+          <label for="quality" class="overall-rating">Good</label>
+          <input type="radio" name="quality" id="quality" value="fair" />
+          <label for="quality" class="overall-rating">Fair</label>
+          <input type="radio" name="quality" id="quality" value="poor" />
+          <label for="quality" class="overall-rating">Poor</label>
+
+          <!-- TEXT AREA -->
+          <label for="textarea" class="heading">Additional Comments</label>
+          <textarea
+            name="comments"
+            id="comments"
+            rows="10"
+            cols="700"
+          ></textarea>
+
+          <!-- BUTTON -->
+          <input type="submit" id="submit" value="Submit" class="button" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
