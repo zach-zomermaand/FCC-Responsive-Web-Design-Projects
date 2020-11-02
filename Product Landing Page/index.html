@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <img
+              src="https://cdn.pixabay.com/photo/2017/09/23/21/21/label-2780146_960_720.png"
+              alt=""
+              id="header-img"
+              class="header-img"
+            />
+          </li>
+          <li>
+            <a href="#menu" class="nav-link nav-links">Menu</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <h1 class="description">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+      <h2 id="menu" class="menu">Popular Items</h2>
+      <div class="menu">
+        <div class="burger">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/10/17/22/14/hamburger-993526_960_720.jpg"
+            alt=""
+            class="menu-img"
+          />
+          <p class="menu-item">Cheeseburger <span class="item-price">$9.99</span></p>
+        </div>
+        <div class="pizza">
+          <img
+            src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717__340.jpg"
+            alt=""
+            class="menu-img"
+          />
+          <p class="menu-item">Pizza <span class="item-price">$9.99</span></p>
+        </div>
+        <div class="sandwich">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/07/14/21/30/club-sandwich-3538455__340.jpg"
+            alt=""
+            class="menu-img"
+          />
+          <p class="menu-item">Sandwich <span class="item-price">$9.99</span></p>
+        </div>
+      </div>
+      <button class="order-button">Order Now</button>
+      <div class="about-section">
+        <h2 id="about">About Us</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, vel. Nisi molestiae, dolor fugit nobis tempora quia consequuntur inventore atque?</h3>
+        <div class="product-video">
+          <iframe
+          id="video"
+            src="//player.vimeo.com/video/409042493?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&amp;loop=1"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+        </div>
+        <div class="contact-form">
+          <h2 id="contact">Contact Us</h2>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="feedback" id="feedback">Have a question or feedback?</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            <label for="email">Email</label>
+            <input type="email" required="required" placeholder="Enter Email" id="email" name="email">
+            <input type="submit" value="Submit" id="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
