@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar">
+      <header>CSS Grid</header>
+      <ul class="navbar">
+        <li class="nav-list">
+          <a class="nav-link" href="#Grid_Layout">Grid Layout</a>
+        </li>
+        <li class="nav-list">
+          <a class="nav-link" href="#Important_Terms">Important Terms</a>
+        </li>
+        <li class="nav-list">
+          <a class="nav-link" href="#Grid_Elements">Grid Elements</a>
+        </li>
+        <li class="nav-list">
+          <a class="nav-link" href="#Parent_Properties_(Container)"
+            >Parent Properties (Container)</a
+          >
+        </li>
+        <li class="nav-list">
+          <a class="nav-link" href="#Child_Properties_(Items)"
+            >Child Properties (Items)</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Grid_Layout">
+        <header class="first-header">Grid Layout</header>
+        <p class="section-text">
+          CSS Grid allows a user to design web pages using a multi-directional
+          grid based system, removing the need to use more complex floats and
+          positioning
+        </p>
+      </section>
+      <section class="main-section" id="Important_Terms">
+        <header>Important Terms</header>
+        <p class="section-text">
+          Before beginning to use CSS Grid to change the layout of your webpage,
+          there are a few key terms to understand.
+        </p>
+        <ul class="terms">
+          <li class="term">
+            <p>
+              <span class="bold">Grid Container</span> - The direct parent of
+              all grid items, the Grid Container must have the
+              <code>display:grid</code> property.
+            </p>
+          </li>
+          <li class="term">
+            <p>
+              <span class="bold">Grid Item</span> - The direct children (or
+              descendants) of a Grid Container.
+            </p>
+          </li>
+          <li class="term">
+            <p>
+              <span class="bold">Grid Row</span> - The cells that make up a
+              horizontal line in a grid.
+            </p>
+          </li>
+          <li class="term">
+            <p>
+              <span class="bold">Grid Column</span> - The cells that make up a
+              vertical line in a grid.
+            </p>
+          </li>
+          <li class="term">
+            <p>
+              <span class="bold">Grid Gap</span> - The space between the cells
+              in a grid. The gap is determined by the <code>column-gap</code>,
+              <code>row-gap</code>, and <code>gap</code> properties.
+            </p>
+          </li>
+          <li class="term">
+            <p>
+              <span class="bold">Grid Area</span> - The cells surrounded by 4
+              grid lines, any number of cells can be included, but must be
+              surrounded by 4 grid lines (gaps).
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Grid_Elements">
+        <header>Grid Elements</header>
+        <p class="section-text">
+          A grid layout consists of a parent element and one or more child
+          elements.
+        </p>
+        <h3>Example</h3>
+        <pre><code>
+     &ltdiv class="container"&gt
+       &ltdiv class="item"&gtA&lt/div&gt
+       &ltdiv class="item"&gtB&lt/div&gt
+       &ltdiv class="item"&gtC&lt/div&gt
+       &ltdiv class="item"&gtD&lt/div&gt
+       &ltdiv class="item"&gtE&lt/div&gt
+       &ltdiv class="item"&gtF&lt/div&gt
+     &lt/div&gt
+     </code></pre>
+        <div class="container">
+          <div class="item">A</div>
+          <div class="item">B</div>
+          <div class="item">C</div>
+          <div class="item">D</div>
+          <div class="item">E</div>
+          <div class="item">F</div>
+        </div>
+      </section>
+      <section class="main-section" id="Parent_Properties_(Container)">
+        <header>Parent Properties (Container)</header>
+        <h3>grid-template-columns</h3>
+        <h3>grid-template-rows</h3>
+        <p class="section-text">
+          Defines the columns and rows of the grid. Values are separated by a
+          space and can be entered as percentage, length or fraction
+          measurements.
+        </p>
+        <pre><code>
+     .container{
+      grid-template-columns: 5px 10% 1fr;
+      grid-template-rows: 10px 5% 1fr;
+     }
+    </code></pre>
+        <p class="section-text">
+          If your grid has repeating parts, use can use the repeat() value to
+          write less code.
+        </p>
+        <pre><code>
+     .container{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+     }
+
+     =
+
+     .container{
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+     }
+    </code></pre>
+        <h3>grid-template-areas</h3>
+        <p class="section-text">
+          Defines a grid template by referencing names of a grid area which are
+          specified using the <code>grid-area</code> property. Using the same
+          name for multiple areas causes the content to span multiple areas and
+          a period signifies an empty cell.
+        </p>
+        <pre><code>
+      .container{
+        grid-template-areas:
+        "area-1  area-1  area-2"
+        "area-3     .    area-4"
+        "area-5  area-6  area-6"
+      }
+
+      .item a{
+        grid-area: area-1;
+      }
+
+      .item b{
+        grid-area: area-2;
+      }
+
+      .item c{
+        grid-area: area-3;
+      }
+
+      .item d{
+        grid-area: area-4;
+      }
+
+      .item e{
+        grid-area: area-5;
+      }
+
+      .item f{
+        grid-area: area-6;
+      }
+        </code></pre>
+        <div class="grid-template-areas">
+          <div class="item area-1">A</div>
+          <div class="item area-2">B</div>
+          <div class="item area-3">C</div>
+          <div class="item area-4">D</div>
+          <div class="item area-5">E</div>
+          <div class="item area-6">F</div>
+        </div>
+        <h3>column-gap</h3>
+        <h3>row-gap</h3>
+        <h3>gap</h3>
+        <p class="section-text">
+          The space between the cells in a grid. The gap is determined by the
+          <code>column-gap</code>, <code>row-gap</code>, and
+          <code>gap</code> properties. Any value type can be used to specify how
+          large the gap is between cells.
+        </p>
+        <pre><code>
+      .container{
+        grid-template-columns: 100px 1rem 1fr;
+        grid-template-rows: 50px 1rem 1rem;
+        column-gap: 10px;
+        row-gap: 1rem;
+      }
+        </code></pre>
+        <h3>justify-items</h3>
+        <h3>align-items</h3>
+        <h3>place-items</h3>
+        <p class="section-text">
+          Justify-items aligns items vertically within their cell, align-items
+          aligns items horizontally within their cell. Both properties apply to
+          all grid items and accept the following values:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Start - aligns items with the start (left, top) edge of their
+              cell.
+            </p>
+          </li>
+          <li>
+            <p>
+              End - aligns items with the end (right, bottom) edge of their
+              cell.
+            </p>
+          </li>
+          <li>
+            <p>Center - aligns items with the center of the cell.</p>
+          </li>
+          <li>
+            <p>
+              Stretch - fills the whole width or height of the cell, this is the
+              default value.
+            </p>
+          </li>
+        </ul>
+        <p class="section-text">
+          Place-items is a short hand to combine both justify-items and
+          align-items, it accepts both values in one declaration with
+          align-items coming before justify-items.
+        </p>
+        <pre><code>
+        .container{
+          justify-items: start | end | center | stretch;
+          align-items: start | end | center | stretch;
+        }
+
+        .container{
+          place-items: center start;
+        }
+          </code></pre>
+      </section>
+      <section class="main-section" id="Child_Properties_(Items)">
+        <header>Child Properties (Items)</header>
+        <h3>justify-self</h3>
+        <h3>align-self</h3>
+        <h3>place-self</h3>
+        <p class="section-text">
+          Justify-self aligns items vertically within their cell, align-self
+          aligns items horizontally within their cell. Both properties apply to
+          content in a single grid item and accept the following values:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Start - aligns grid item with the start (left, top) edge of their
+              cell.
+            </p>
+          </li>
+          <li>
+            <p>
+              End - aligns grid item with the end (right, bottom) edge of their
+              cell.
+            </p>
+          </li>
+          <li>
+            <p>Center - aligns grid item with the center of the cell.</p>
+          </li>
+          <li>
+            <p>
+              Stretch - fills the whole width or height of the cell, this is the
+              default value.
+            </p>
+          </li>
+        </ul>
+        <p class="section-text">
+          Place-self is a short hand to combine both justify-self and
+          align-self, it accepts both values in one declaration with align-self
+          coming before justify-self.
+        </p>
+        <pre><code>
+        .container{
+          justify-self: start | end | center | stretch;
+          align-self: start | end | center | stretch;
+        }
+
+        .container{
+          place-self: center start;
+        }
+          </code></pre>
+      </section>
+      <p>
+        For more information about CSS Grid, please visit
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+          >CSS-Tricks</a
+        >.
+      </p>
+    </main>
+  </body>
+</html>
