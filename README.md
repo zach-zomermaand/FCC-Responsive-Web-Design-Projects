@@ -13,4 +13,9 @@
     - Build a product landing page using HTML and CSS.
     - https://codepen.io/zach-zomermaand/full/xxOjPdE
     
+4. Technical Documentation Page
+    - Build a technical documentation page using HTML and CSS.
+    - https://codepen.io/zach-zomermaand/full/XWKxjqm
+    
+    
 
