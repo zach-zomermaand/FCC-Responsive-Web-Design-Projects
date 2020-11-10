@@ -17,5 +17,9 @@
     - Build a technical documentation page using HTML and CSS.
     - https://codepen.io/zach-zomermaand/full/XWKxjqm
     
+5. Personal Portfolio (Example Only)
+    - Build a personal portfolio page using HTML and CSS.
+    - This page is just an example.
+    - https://codepen.io/zach-zomermaand/full/gOMBEyL
     
 
